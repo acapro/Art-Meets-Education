@@ -8,6 +8,7 @@ gem 'puma', '~> 3.0'
 
 # Assets
 gem 'sass-rails', '~> 5.0'
+gem 'haml'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
@@ -32,6 +33,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'figaro'
+  gem 'erb2haml'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
