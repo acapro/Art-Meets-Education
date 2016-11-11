@@ -8,6 +8,8 @@ gem 'puma', '~> 3.0'
 
 # Assets
 gem 'sass-rails', '~> 5.0'
+gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon'
+gem 'neat'
 gem 'haml'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
