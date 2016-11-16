@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Year:
+  = @project.year
+%p
+  %strong Country:
+  = @project.country
+%p
+  %strong City:
+  = @project.city
+%p
+  %strong Slum:
+  = @project.slum
+= link_to 'Edit', edit_project_path(@project)
+|
+= link_to 'Back', projects_path
