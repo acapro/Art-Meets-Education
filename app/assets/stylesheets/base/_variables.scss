@@ -3,8 +3,8 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: $font-stack-system;
-$heading-font-family: $base-font-family;
+$base-font-family: 'Rubik', sans-serif;
+$heading-font-family: 'Rubik', sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -15,7 +15,7 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
+$base-spacing: 36px;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
@@ -32,7 +32,7 @@ $bg-red: #bd4932;
 $bg-yellow: #ffd34e;
 
 // Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: #2b2b2b;
 $action-color: $blue;
 
 // Border
