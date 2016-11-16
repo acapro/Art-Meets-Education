@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 2016-11-16
+  country: MyString
+  city: MyString
+  slum: MyString
+
+two:
+  year: 2016-11-16
+  country: MyString
+  city: MyString
+  slum: MyString

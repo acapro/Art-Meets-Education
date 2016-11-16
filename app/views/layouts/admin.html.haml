@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1, user-scalable=no", :name => "viewport", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload'
+    %title Ame
+    = csrf_meta_tags
+
+  %body
+    = yield
