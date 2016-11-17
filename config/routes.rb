@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get '/admin' => 'projects#index'
   scope '/admin' do
-    resources :projects
+    resources :projects do
+      resources :kids, shallow: true
+    end
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

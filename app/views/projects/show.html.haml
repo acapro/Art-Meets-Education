@@ -1,4 +1,4 @@
-%p#notice= notice
+%h1 Project
 %p
   %strong Year:
   = @project.year
@@ -13,4 +13,10 @@
   = @project.slum
 = link_to 'Edit', edit_project_path(@project)
 |
-= link_to 'Back', projects_path
+= link_to 'View all projects', projects_path
+
+%br
+%br
+%br
+
+= render 'kids/index', kids: @kids

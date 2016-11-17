@@ -1,4 +1,3 @@
-%p#notice= notice
 %h1 Projects
 %table
   %thead
@@ -7,6 +6,7 @@
       %th Country
       %th City
       %th Slum
+      %th Kids
       %th{:colspan => "3"}
   %tbody
     - @projects.each do |project|
@@ -15,6 +15,7 @@
         %td= project.country
         %td= project.city
         %td= project.slum
+        %td= project.kids.count
         %td= link_to 'Show', project
         %td= link_to 'Edit', edit_project_path(project)
         %td= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
