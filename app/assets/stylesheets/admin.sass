@@ -2,8 +2,27 @@
 @import 'bourbon'
 @import 'neat'
 @import 'base/base'
+@import 'components/hr'
 
 // general
 body
   background-color: $bg-yellow
   padding: $base-spacing
+
+// header and nav
+header
+  display: flex
+  flex-flow: row
+  justify-content: space-between
+  align-items: center
+  margin-bottom: $base-spacing
+  img
+    width: 60px
+    height: 60px
+  nav
+    ul
+      li
+        display: inline-block
+        margin-left: $base-spacing
+section
+  margin-top: $base-spacing

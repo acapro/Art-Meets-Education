@@ -9,5 +9,14 @@
     = csrf_meta_tags
 
   %body
-    %p#notice= notice
-    = yield
+    %header
+      = image_tag('ame_logo.png')
+      %nav
+        %ul
+          = nav_link 'Projects', projects_path
+          = nav_link 'Sections', '#'
+          %li= link_to 'Log Out', '#'
+    %hr
+    %section
+      %p#notice= notice
+      = yield
