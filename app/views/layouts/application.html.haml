@@ -8,6 +8,8 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = render 'components/header'
-    = render 'components/pop_out'
-    = yield
+    #bg-color{'data-turbolinks-permanent' => true}
+    .page
+      = render 'components/header'
+      = render 'components/pop_out'
+      = yield

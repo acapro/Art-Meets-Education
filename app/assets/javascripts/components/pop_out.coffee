@@ -9,11 +9,11 @@ $('#pop-out').ready ->
 
 document.addEventListener 'turbolinks:load', ->
   window.waitForFinalEvent (->
-      if $('section.splash')[0]
-        $('#pop-out').removeClass('closed')
-        unless window.pop_out_scene.enabled()
-          set_pop_out_scroll()
-      else
-        $('#pop-out').addClass('closed')
-        window.pop_out_scene.enabled(false)
-    ), 200, 'pop_out_trigger'
+    if $('section.splash')[0]
+      $('#pop-out').removeClass('closed')
+      unless window.pop_out_scene.enabled()
+        set_pop_out_scroll()
+    else
+      $('#pop-out').addClass('closed')
+      window.pop_out_scene.enabled(false)
+  ), 200, 'pop_out_trigger'
