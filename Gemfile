@@ -7,6 +7,7 @@ gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'simple_form'
 gem 'country_select'
+gem 'devise'
 
 # Assets
 gem 'sass-rails', '~> 5.0'

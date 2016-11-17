@@ -1,4 +1,5 @@
 class KidsController < ApplicationController
+  before_action :authenticate_admin!
   layout 'admin'
   before_action :set_kid, only: [:show, :edit, :update, :destroy]
 
