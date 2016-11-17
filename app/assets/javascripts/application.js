@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require scrollmagic/scrollmagic/minified/ScrollMagic.min.js
-//= require_tree .
+//= require_tree ./components
