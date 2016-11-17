@@ -1,13 +1,25 @@
-header
-  display: flex
-  margin-bottom: $base-spacing
-  nav
-    flex: 1
-    margin-left: $base-spacing * 6
-    ul
+#header-container
+  background: $bg-blue
+  +bg_transition
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: $base-spacing $base-spacing*2
+  padding-bottom: 0
+  header
+    display: flex
+    margin-bottom: $base-spacing
+    img
       height: 100%
-      display: flex
-      align-items: center
-      justify-content: space-between
-      li
-        display: inline-block
+      width: auto
+    nav
+      flex: 1
+      margin-left: $base-spacing * 6
+      ul
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        li
+          display: inline-block

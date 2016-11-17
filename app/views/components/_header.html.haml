@@ -1,5 +1,6 @@
-%header
-  = link_to root_path do
-    = image_tag('ame_logo.png')
-  = render partial: 'components/nav'
-%hr
+#header-container{'data-turbolinks-permanent' => true}
+  %header
+    = link_to root_path do
+      = image_tag('ame_logo.png')
+    = render partial: 'components/nav'
+  %hr

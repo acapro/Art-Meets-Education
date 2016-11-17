@@ -9,6 +9,7 @@ bg_color_change = ->
   new_color = colors[Math.floor(Math.random() * colors.length)]
   $('#pop-out').css('background-color', new_color)
   $('#bg-color').css('background-color', new_color)
+  $('#header-container').css('background-color', new_color)
 
 document.addEventListener 'turbolinks:visit', ->
   window.waitForFinalEvent (->
