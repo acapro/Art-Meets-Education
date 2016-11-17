@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#index'
+  get '/projects' => 'pages#projects', as: :page_projects
 
   get '/admin' => 'projects#index'
   scope '/admin' do
