@@ -9,6 +9,11 @@ gem 'simple_form'
 gem 'country_select'
 gem 'devise'
 
+# Uploading
+gem 'refile', github: 'refile/refile', require: 'refile/rails'
+gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
+gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
+
 # Assets
 gem 'sass-rails', '~> 5.0'
 gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon'
@@ -20,6 +25,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5.0'
 gem 'jbuilder', '~> 2.5'
 gem 'autoprefixer-rails'
+gem 'font-awesome-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

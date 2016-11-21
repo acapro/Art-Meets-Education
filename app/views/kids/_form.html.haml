@@ -1,4 +1,11 @@
 = simple_form_for [@project, kid] do |f|
   = f.error_notification
   = f.input :name
+  %h2 Images
+  - kid.images.each do |image|
+    .kid-edit-image
+      = image_tag attachment_url(image, :file, :fit, 300, 300, format: "jpg")
+      = link_to image, method: :delete, remote: true, class: 'delete_image' do
+        = fa_icon "trash"
+  = f.attachment_field :images_files, multiple: true
   = f.button :submit

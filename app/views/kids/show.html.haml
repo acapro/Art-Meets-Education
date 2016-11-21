@@ -2,5 +2,10 @@
 %p
   %strong Name:
   = @kid.name
-
+%h2 Images
+- @kid.images.each do |image|
+  = image_tag attachment_url(image, :file, :fit, 300, 300, format: "jpg")
+  %br
 = link_to 'Back to Project', project_path(@kid.project)
+|
+= link_to 'Edit', edit_kid_path(@kid)

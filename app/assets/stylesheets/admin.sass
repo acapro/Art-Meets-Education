@@ -3,6 +3,7 @@
 @import 'neat'
 @import 'base/base'
 @import 'components/hr'
+@import 'font-awesome'
 
 // general
 body
@@ -25,6 +26,22 @@ header
         display: inline-block
         margin-left: $base-spacing
 section
-  margin-top: $base-spacing
+  margin: $base-spacing 0
+
 a:hover
   color: $bg-red
+
+// Forms
+.kid-edit-image
+  display: inline-block
+  position: relative
+  i
+    position: absolute
+    top: 0
+    left: 0
+    background-color: red
+    color: white
+    width: 30px
+    height: 30px
+    text-align: center
+    line-height: 30px

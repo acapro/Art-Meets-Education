@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :projects do
       resources :kids, shallow: true
     end
+    resources :images, only: [:destroy]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
