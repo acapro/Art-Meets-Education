@@ -12,10 +12,11 @@
     %header
       = image_tag('ame_logo.png')
       %nav
-        %ul
-          = nav_link 'Projects', projects_path
-          = nav_link 'Sections', '#'
-          %li= link_to 'Log Out', '#'
+        - if admin_signed_in?
+          %ul
+            = nav_link 'Projects', projects_path
+            //= nav_link 'Sections', '#'
+            %li= link_to('Logout', destroy_admin_session_path, :method => :delete)
     %hr
     %section
       %p#notice= notice
