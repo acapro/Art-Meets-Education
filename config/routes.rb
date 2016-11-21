@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admins
   root 'pages#index'
   get '/projects' => 'pages#projects', as: :page_projects
+  get '/projects/:id', to: 'pages#project', as: :page_project
 
   get '/admin' => 'projects#index'
   scope '/admin' do

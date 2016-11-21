@@ -1,0 +1,12 @@
+%section.projects
+  %aside
+    %h1 Projekte
+    %ul
+      - project_by_year(@projects).each do |year, projects|
+        %li= year.strftime("%Y")
+        %ul.sub
+          - projects.each do |project|
+            %li= project.city
+  %article
+    = render 'sections/kids', project: @project
+= console
