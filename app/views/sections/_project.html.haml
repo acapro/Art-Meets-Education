@@ -1,0 +1,11 @@
+%section.project
+  %aside
+    %h1 Projekte
+    %ul
+      - project_by_year(@projects).each do |year, projects|
+        %li= year.strftime("%Y")
+        %ul.sub
+          - projects.each do |proj|
+            = sub_link "#{proj.city} - #{proj.slum}", proj, project
+  %article
+    = render 'sections/kids', project: project

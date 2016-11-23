@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/projects' => 'pages#projects', as: :page_projects
   get '/projects/:id', to: 'pages#project', as: :page_project
+  get '/kids/:id', to: 'pages#kid', as: :page_kid
 
   get '/admin' => 'projects#index'
   scope '/admin' do

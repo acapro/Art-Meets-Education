@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :get_projects, only: [:index, :projects, :project]
+  before_action :get_projects
 
   def index
   end
@@ -8,6 +8,9 @@ class PagesController < ApplicationController
   end
   def projects
     redirect_to page_project_path(@projects.first.id)
+  end
+  def kid
+    @kid = Kid.find(params[:id])
   end
 
   private

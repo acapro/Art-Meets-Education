@@ -1,0 +1,9 @@
+%section.kid
+  %aside
+    %h1= @kid.name
+    = prev_kid(@kid)
+    = next_kid(@kid)
+  %article
+    images here
+%hr
+= render 'sections/project', project: @kid.project
