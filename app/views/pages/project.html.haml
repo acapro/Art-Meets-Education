@@ -1,4 +1,4 @@
-%section.projects
+%section.project
   %aside
     %h1 Projekte
     %ul
@@ -6,6 +6,6 @@
         %li= year.strftime("%Y")
         %ul.sub
           - projects.each do |project|
-            %li= project.city
+            %li= "#{project.city} - #{project.slum}"
   %article
     = render 'sections/kids', project: @project

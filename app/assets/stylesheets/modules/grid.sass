@@ -1,0 +1,30 @@
+//// Media Query Ranges
+
+// Usage example:
+// @media #{$small-and-down}
+//   min-width: 100%
+//   bottom: 0%
+
+$small-size-up: 601px !default
+$medium-size-up: 993px !default
+$large-size-up: 1201px !default
+$small-size: 600px !default
+$medium-size: 992px !default
+$large-size: 1200px !default
+
+$medium-and-up: "only screen and (min-width : #{$small-size-up})" !default
+$large-and-up: "only screen and (min-width : #{$medium-size-up})" !default
+$small-and-down: "only screen and (max-width : #{$small-size})" !default
+$medium-and-down: "only screen and (max-width : #{$medium-size})" !default
+$medium-only: "only screen and (min-width : #{$small-size-up}) and (max-width : #{$medium-size})" !default
+
+
+//// Media Functions for grid
+
+// Usage example:
+// +media($tablet)
+//   +span-colums(4)
+//   +shift(1)
+$mobile: new-breakpoint(max-width $small-size 4)
+$tablet: new-breakpoint(max-width $medium-size 6)
+$large: new-breakpoint(min-width $medium-size-up 12)
