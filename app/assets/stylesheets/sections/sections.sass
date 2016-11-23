@@ -1,0 +1,40 @@
+section
+  aside
+    +span-columns(3)
+  article
+    +span-columns(9)
+
+section.home-projects
+  margin: $base-spacing 15%
+
+section.project
+  article
+    margin-top: $base-spacing
+
+section.splash
+  .cell
+    width: 100%
+  img
+    width: 100%
+    display: block
+  h1
+    margin-top: $base-spacing
+
+section.who-we-are
+  display: flex
+  flex-flow: wrap row
+  margin: $base-spacing 15%
+  a
+    margin-top: $base-spacing/2
+
+section.kid
+  min-height: 100vh
+  .prev_next
+    color: rgba($dark-gray, 0.3)
+    .close
+      margin: 0 $small-spacing
+  article
+    margin-top: $base-spacing
+    img
+      width: 100%
+      margin-bottom: $base-spacing
