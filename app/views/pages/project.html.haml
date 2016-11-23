@@ -6,6 +6,6 @@
         %li= year.strftime("%Y")
         %ul.sub
           - projects.each do |project|
-            %li= "#{project.city} - #{project.slum}"
+            = sub_link "#{project.city} - #{project.slum}", page_project_path(project)
   %article
     = render 'sections/kids', project: @project

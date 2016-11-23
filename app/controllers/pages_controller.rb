@@ -12,6 +12,6 @@ class PagesController < ApplicationController
 
   private
   def get_projects
-    @projects = Project.order(year: :asc)
+    @projects = Project.order(year: :desc)
   end
 end
