@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/about' => 'pages#abouts', as: :page_abouts
   get '/about/:path' => 'pages#about', as: :page_about
+  get '/team' => 'pages#team', as: :page_team
   get '/projects' => 'pages#projects', as: :page_projects
   get '/projects/:id', to: 'pages#project', as: :page_project
   get '/kids/:id', to: 'pages#kid', as: :page_kid

@@ -1,0 +1,14 @@
+%section.team
+  %aside
+    %h1 Über AME
+    = render 'components/about_nav'
+  %article
+    .team
+      - @team_members.each do |team_member|
+        .member
+          .profile= image_tag attachment_url(team_member, :profile_image, :fit, 300, 300, format: "jpg")
+          .info
+            = team_member.name
+            %br
+            = team_member.origin
+            = markdown(team_member.content)

@@ -1,9 +1,6 @@
 %section.about
   %aside
     %h1 Über AME
-    %nav
-      %ul
-        - @about_sections.each do |section|
-          = about_sub_link section.nav, section, @about_section
+    = render 'components/about_nav'
   %article
     = markdown(@about_section.content)
