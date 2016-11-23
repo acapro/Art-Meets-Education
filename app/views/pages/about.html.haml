@@ -3,9 +3,7 @@
     %h1 Über AME
     %nav
       %ul
-        %li= link_to 'etwas', '#'
-        %li= link_to 'etwas', '#'
-        %li= link_to 'etwas', '#'
-        %li= link_to 'etwas', '#'
+        - @about_sections.each do |section|
+          = about_sub_link section.nav, section, @about_section
   %article
-    text
+    = @about_section.content

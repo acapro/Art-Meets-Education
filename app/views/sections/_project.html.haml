@@ -6,6 +6,6 @@
         %li= year.strftime("%Y")
         %ul.sub
           - projects.each do |proj|
-            = sub_link "#{proj.city} - #{proj.slum}", proj, project
+            = project_sub_link "#{proj.city} - #{proj.slum}", proj, project
   %article
     = render 'sections/kids', project: project

@@ -1,0 +1,8 @@
+= simple_form_for(@about_section) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :path
+    = f.input :nav
+    = f.input :content
+  .form-actions
+    = f.button :submit

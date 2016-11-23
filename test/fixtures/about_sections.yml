@@ -1,10 +1,11 @@
 # == Schema Information
 #
-# Table name: kids
+# Table name: about_sections
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  project_id :integer
+#  path       :string
+#  nav        :string
+#  content    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -12,9 +13,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  project: one
+  path: MyString
+  nav: MyString
+  content: MyText
 
 two:
-  name: MyString
-  project: two
+  path: MyString
+  nav: MyString
+  content: MyText

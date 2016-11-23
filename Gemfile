@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 ruby '2.3.1'
 
@@ -47,6 +48,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'figaro'
   gem 'erb2haml'
+  gem 'annotate'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

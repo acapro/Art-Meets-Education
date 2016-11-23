@@ -4,8 +4,16 @@ class PagesController < ApplicationController
   def index
     @featured_kids = Kid.limit(9).order("RANDOM()")
   end
-  def about
+
+  def abouts
+    redirect_to page_about_path(AboutSection.first.path)
   end
+
+  def about
+    @about_sections = AboutSection.all.order(:created_at)
+    @about_section = AboutSection.find_by path: (params[:path])
+  end
+
   def project
     @project = Project.find(params[:id])
   end
