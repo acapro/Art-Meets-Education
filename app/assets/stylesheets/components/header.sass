@@ -9,6 +9,8 @@
   padding: $base-spacing $base-spacing*2
   padding-bottom: 0
   header
+    transition: all 0.3s ease
+    height: 120px
     display: flex
     margin-bottom: $base-spacing
     img
@@ -24,3 +26,6 @@
         justify-content: space-between
         li
           display: inline-block
+  &.smaller
+    header
+      height: 50px
