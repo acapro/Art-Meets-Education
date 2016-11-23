@@ -6,4 +6,4 @@
         - @press_sections.each do |section|
           = press_sub_link section.nav, section, @press_section
   %article
-    text
+    = markdown(@press_section.content)
