@@ -1,0 +1,11 @@
+= simple_form_for(@team) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :name
+    = f.input :origin
+    = f.input :content
+    - if @team.profile_image
+      = image_tag attachment_url(@team, :profile_image, :fit, 300, 300, format: "jpg")
+    = f.input :profile_image, as: :attachment, presigned: true
+  .form-actions
+    = f.button :submit

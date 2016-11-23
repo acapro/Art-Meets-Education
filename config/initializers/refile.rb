@@ -1,5 +1,6 @@
 # config/initializers/refile.rb
 require "refile/s3"
+require 'refile/simple_form'
 
 aws = {
   access_key_id: Rails.application.secrets.aws_access_key_id,

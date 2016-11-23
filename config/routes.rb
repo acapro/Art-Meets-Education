@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :kids, shallow: true
     end
     resources :about_sections
+    resources :teams
     resources :images, only: [:destroy]
   end
 

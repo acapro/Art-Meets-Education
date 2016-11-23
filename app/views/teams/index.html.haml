@@ -1,0 +1,21 @@
+%h1 Team Members
+%table
+  %thead
+    %tr
+      %th
+      %th Name
+      %th Origin
+      %th Content
+      %th{:colspan => "3"}
+  %tbody
+    - @teams.each do |team|
+      %tr
+        %td= image_tag attachment_url(team, :profile_image, :fit, 50, 50, format: "jpg")
+        %td= team.name
+        %td= team.origin
+        %td= team.content.truncate(40)
+        %td= link_to 'Show', team
+        %td= link_to 'Edit', edit_team_path(team)
+        %td= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Team', new_team_path
