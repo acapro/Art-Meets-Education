@@ -1,0 +1,1 @@
+json.partial! "press_sections/press_section", press_section: @press_section

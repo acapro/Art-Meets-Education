@@ -1,0 +1,12 @@
+%p
+  %strong Path:
+  = @press_section.path
+%p
+  %strong Nav:
+  = @press_section.nav
+%p
+  %strong Content:
+  = markdown(@press_section.content)
+= link_to 'Edit', edit_press_section_path(@press_section)
+|
+= link_to 'Back', press_sections_path

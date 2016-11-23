@@ -1,0 +1,1 @@
+json.array! @press_sections, partial: 'press_sections/press_section', as: :press_section
