@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   before_action :get_projects
 
   def index
+    @featured_kids = Kid.limit(9).order("RANDOM()")
   end
   def project
     @project = Project.find(params[:id])

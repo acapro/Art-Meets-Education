@@ -2,6 +2,6 @@
   Art Meets Education Headline
   %small Kurze Beschreibung, was Art Meets Education macht
 
-= render partial: 'sections/splash'
+= render 'sections/splash', kids: @featured_kids
 = render partial: 'sections/who_we_are'
-= render partial: 'sections/home_projects'
+= render 'sections/home_projects', kids: @featured_kids
