@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require scrollmagic/scrollmagic/minified/ScrollMagic.min.js
+//= require flickity/dist/flickity.pkgd.min
 //= require_tree ./modules
 //= require_tree ./components
