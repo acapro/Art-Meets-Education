@@ -6,4 +6,4 @@
         - @about_sections.each do |section|
           = about_sub_link section.nav, section, @about_section
   %article
-    = @about_section.content
+    = markdown(@about_section.content)

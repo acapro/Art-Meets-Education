@@ -1,12 +1,9 @@
-%p
-  %strong Path:
-  = @about_section.path
-%p
-  %strong Nav:
-  = @about_section.nav
-%p
-  %strong Content:
-  = @about_section.content
+%h2 Path:
+= @about_section.path
+%h2 Nav:
+= @about_section.nav
+%h2 Content:
+= markdown(@about_section.content)
 = link_to 'Edit', edit_about_section_path(@about_section)
 |
 = link_to 'Back', about_sections_path

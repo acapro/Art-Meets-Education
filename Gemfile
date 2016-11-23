@@ -9,6 +9,7 @@ gem 'puma', '~> 3.0'
 gem 'simple_form'
 gem 'country_select'
 gem 'devise'
+gem 'redcarpet'
 
 # Uploading
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
