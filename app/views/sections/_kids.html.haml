@@ -1,7 +1,8 @@
 -# %h2 Kids
 -# = project
 .gallery
-  - 10.times do
+  - project.kids.each do |kid|
     .item
-      = image_tag 'placeholder/child_01.jpg'
-      Some kid
+      - if kid.images.count > 0
+        = image_tag attachment_url(kid.images.first, :file, :fit, 300, 300, format: "jpg")
+      = kid.name
