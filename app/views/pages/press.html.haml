@@ -1,0 +1,9 @@
+%section.press
+  %aside
+    %h1 Presse
+    %nav
+      %ul
+        - @press_sections.each do |section|
+          = press_sub_link section.nav, section, @press_section
+  %article
+    text

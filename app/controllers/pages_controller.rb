@@ -29,6 +29,15 @@ class PagesController < ApplicationController
     @kid = Kid.find(params[:id])
   end
 
+  def presses
+    redirect_to page_press_path(PressSection.first.path)
+  end
+
+  def press
+    @press_sections = PressSection.all.order(:created_at)
+    @press_section = PressSection.find_by path: (params[:path])
+  end
+
   private
   def get_projects
     @projects = Project.order(year: :desc)
