@@ -7,6 +7,8 @@
 #  project_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  short      :string
+#  content    :text
 #
 
 require 'test_helper'
