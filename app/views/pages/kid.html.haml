@@ -1,7 +1,8 @@
 %section.kid
   %aside
     %h1= @kid.name
-    %p= markdown(@kid.content)
+    - if @kid.content
+      %p= markdown(@kid.content)
     .prev_next
       = prev_kid(@kid)
       = link_to 'schließen', page_project_path(@kid.project), class: 'close'
