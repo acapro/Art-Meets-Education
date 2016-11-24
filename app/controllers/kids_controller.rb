@@ -66,6 +66,6 @@ class KidsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kid_params
-      params.require(:kid).permit(:name, :project_id, images_files: [])
+      params.require(:kid).permit(:name, :project_id, :short, :content, images_files: [])
     end
 end

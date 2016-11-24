@@ -2,6 +2,12 @@
 %p
   %strong Name:
   = @kid.name
+%p
+  %strong Short:
+  = @kid.short
+%p
+  %strong Content:
+  = markdown(@kid.content)
 %h2 Images
 - @kid.images.each do |image|
   = image_tag attachment_url(image, :file, :fit, 300, 300, format: "jpg")

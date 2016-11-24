@@ -4,5 +4,7 @@
       .cell
         - if kid.images.count > 0
           = image_tag attachment_url(kid.images.first, :file, :fit, 1000, 1000, format: "jpg")
-        %h2= kid.name
+        %h2
+          = kid.name
+          %small= kid.short
   %hr
