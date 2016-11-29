@@ -6,25 +6,113 @@
   left: 0
   width: 100%
   padding: $base-spacing $base-spacing*2
+  +media($mobile)
+    padding: $small-spacing
+    padding-bottom: 0
   padding-bottom: 0
   header
     transition: all 0.3s ease
-    height: 120px
-    display: flex
-    margin-bottom: $base-spacing
     img
       height: 100%
       width: auto
-    nav
-      flex: 1
-      margin-left: $base-spacing * 6
-      ul
-        height: 100%
-        display: flex
-        align-items: center
-        justify-content: space-between
-        li
-          display: inline-block
-  &.smaller
+
+  // Desktop Navigation
+  +media($nav-desk)
     header
-      height: 50px
+      #nav-trigger
+        display: none
+      height: 120px
+      display: flex
+      margin-bottom: $base-spacing
+      nav
+        flex: 1
+        margin-left: $base-spacing * 6
+        +media($tablet)
+          margin-left: $base-spacing * 3
+        ul
+          height: 100%
+          display: flex
+          align-items: center
+          justify-content: space-between
+          li
+            display: inline-block
+    &.smaller
+      header
+        height: 50px
+
+  // Mobile Navigation
+  +media($nav-mobile)
+    $header-height: 80px
+    header
+      position: relative
+      height: $header-height
+      img
+        padding-bottom: $small-spacing
+      nav
+        transition: right 0.3s ease
+        background-color: white
+        position: fixed
+        top: $header-height + 24px
+        right: -220px
+        width: 220px
+        padding: $base-spacing/2 $base-spacing/1.5
+        font-size: 1.3em
+        &.show
+          right: 0px
+        ul
+          li
+      #mobile-trigger
+        -webkit-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+        -webkit-transition: .5s ease-in-out
+        -moz-transition: .5s ease-in-out
+        -o-transition: .5s ease-in-out
+        transition: .5s ease-in-out
+        cursor: pointer
+        width: 50px
+        height: 60px
+        position: absolute
+        right: 0
+        top: 0
+        span
+          display: block
+          position: absolute
+          height: 5px
+          width: 100%
+          border-radius: 5px
+          background: $dark-gray
+          opacity: 1
+          -webkit-transform: rotate(0deg)
+          -moz-transform: rotate(0deg)
+          -o-transform: rotate(0deg)
+          transform: rotate(0deg)
+          -webkit-transition: .25s ease-in-out
+          -moz-transition: .25s ease-in-out
+          -o-transition: .25s ease-in-out
+          transition: .25s ease-in-out
+          &:nth-child(1)
+            top: 12px
+          &:nth-child(2)
+            top: 27px
+          &:nth-child(3)
+            top: 42px
+        &.active
+          span
+            &:nth-child(1)
+              top: 24px
+              -webkit-transform: rotate(45deg)
+              -moz-transform: rotate(45deg)
+              -o-transform: rotate(45deg)
+              transform: rotate(45deg)
+            &:nth-child(3)
+              top: 24px
+              -webkit-transform: rotate(-45deg)
+              -moz-transform: rotate(-45deg)
+              -o-transform: rotate(-45deg)
+              transform: rotate(-45deg)
+            &:nth-child(2)
+              opacity: 0
+    &.smaller
+      header

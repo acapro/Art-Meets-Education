@@ -25,6 +25,8 @@ $medium-only: "only screen and (min-width : #{$small-size-up}) and (max-width : 
 // +media($tablet)
 //   +span-colums(4)
 //   +shift(1)
+$nav-mobile: new-breakpoint(max-width $nav-mobile-breakpoint 4)
+$nav-desk: new-breakpoint(min-width $nav-mobile-breakpoint+1 12)
 $mobile: new-breakpoint(max-width $small-size 4)
 $tablet: new-breakpoint(max-width $medium-size 6)
 $large: new-breakpoint(min-width $medium-size-up 12)

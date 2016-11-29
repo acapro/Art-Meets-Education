@@ -14,8 +14,13 @@ nav_size = ->
 $('header').ready ->
   $nav = $('header > nav')
   nav_size()
-  $('header').find('a').click ->
-    console.log 'clicked'
+  $('header a').on 'click touchstart', ->
     $nav.find("*").removeClass('active')
-    console.log this
     $(this).parent().addClass('active')
+    $('#header-container nav').removeClass('show')
+    $('#mobile-trigger').removeClass('active')
+    return
+  $('#mobile-trigger').on 'click touchstart', ->
+    $('#mobile-trigger').toggleClass('active')
+    $('#header-container nav').toggleClass('show')
+    return false
