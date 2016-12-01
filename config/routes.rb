@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     resources :about_sections
     resources :teams
     resources :press_sections
+    resources :exhibits
     resources :images, only: [:destroy]
   end
 

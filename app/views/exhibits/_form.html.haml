@@ -1,0 +1,10 @@
+= simple_form_for(@exhibit) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :location
+    = f.input :content
+    - if @exhibit.info_image
+      = image_tag attachment_url(@exhibit, :info_image, :fit, 300, 300, format: "jpg")
+    = f.input :info_image, as: :attachment, presigned: true
+  .form-actions
+    = f.button :submit
