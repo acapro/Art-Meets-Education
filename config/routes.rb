@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :teams
     resources :press_sections
     resources :exhibits
+    resources :contacts
     resources :images, only: [:destroy]
   end
 

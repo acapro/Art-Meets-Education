@@ -10,7 +10,7 @@
     - @exhibits.each do |exhibit|
       %tr
         %td= exhibit.location
-        %td= exhibit.content
+        %td= exhibit.content.truncate(40)
         %td= link_to 'Show', exhibit
         %td= link_to 'Edit', edit_exhibit_path(exhibit)
         %td= link_to 'Destroy', exhibit, method: :delete, data: { confirm: 'Are you sure?' }
