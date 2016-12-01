@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/projects' => 'pages#projects', as: :page_projects
   get '/projects/:id', to: 'pages#project', as: :page_project
   get '/kids/:id', to: 'pages#kid', as: :page_kid
+  get '/contact', to: 'pages#contact', as: :page_contact
 
   get '/admin' => 'projects#index'
   scope '/admin' do

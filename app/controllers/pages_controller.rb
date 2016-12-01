@@ -47,6 +47,10 @@ class PagesController < ApplicationController
     @exhibit = Exhibit.find(params[:id])
   end
 
+  def contact
+    @contacts = Contact.all.order(:created_at)
+  end
+
   private
   def get_projects
     @projects = Project.order(year: :desc)

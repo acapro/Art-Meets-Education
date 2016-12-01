@@ -1,0 +1,6 @@
+%section.contact
+  %aside
+    %h1 Kontakt
+  %article
+    - @contacts.each do |contact|
+      = markdown(contact.section)
