@@ -7,10 +7,10 @@ module ApplicationHelper
       class_name = ''
     end
     content_tag(:li, :class => class_name) do
-      link_to link_text, link_path
+      link_to link_text, link_path, target: options[:target]
     end
   end
-  
+
   def markdown(text)
     options = {
       filter_html:     false,

@@ -4,7 +4,7 @@
     = nav_link 'Projekte', page_projects_path, action: 'project'
     - if Exhibit.count > 0
       = nav_link 'Ausstellungen', page_exhibits_path, action: 'exhibit'
-    = nav_link 'Shop', '#'
+    = nav_link 'Shop', 'http://shop.artmeetseducation.de/', target: '_blank'
     = nav_link 'Kontakt', page_contact_path, action: 'contact'
     - if PressSection.count > 0
       = nav_link 'Presse', page_presses_path, action: 'press'
