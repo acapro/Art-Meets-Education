@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/about' => 'pages#abouts', as: :page_abouts
   get '/about/:path' => 'pages#about', as: :page_about
+  get '/exhibits' => 'pages#exhibits', as: :page_exhibits
+  get '/exhibits/:id' => 'pages#exhibit', as: :page_exhibit
   get '/press' => 'pages#presses', as: :page_presses
   get '/press/:path' => 'pages#press', as: :page_press
   get '/team' => 'pages#team', as: :page_team

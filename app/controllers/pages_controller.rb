@@ -38,6 +38,15 @@ class PagesController < ApplicationController
     @press_section = PressSection.find_by path: (params[:path])
   end
 
+  def exhibits
+    redirect_to page_exhibit_path(Exhibit.first)
+  end
+
+  def exhibit
+    @exhibits = Exhibit.all.order(:created_at)
+    @exhibit = Exhibit.find(params[:id])
+  end
+
   private
   def get_projects
     @projects = Project.order(year: :desc)

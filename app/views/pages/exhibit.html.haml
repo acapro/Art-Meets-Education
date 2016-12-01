@@ -1,0 +1,11 @@
+%section.exhibit
+  %aside
+    %h1 Ausstellungen
+    %nav
+      %ul
+        - @exhibits.each do |exhibit|
+          = exhibit_sub_link exhibit.location, exhibit, @exhibit
+
+  %article
+    = markdown(@exhibit.content)
+    = image_tag attachment_url(@exhibit, :info_image, format: "jpg")
