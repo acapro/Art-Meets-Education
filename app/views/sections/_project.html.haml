@@ -8,4 +8,6 @@
           - projects.each do |proj|
             = project_sub_link "#{proj.city} - #{proj.slum}", proj, project
   %article
+    - if project.content
+      = markdown(project.content)
     = render 'sections/kids', project: project

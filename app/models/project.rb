@@ -9,8 +9,10 @@
 #  slum       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  content    :text
 #
 
 class Project < ApplicationRecord
   has_many :kids
+  validates :year, :country, :city, :slum, :content, presence: true
 end
