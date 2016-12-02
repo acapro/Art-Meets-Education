@@ -10,6 +10,7 @@ gem 'simple_form'
 gem 'country_select'
 gem 'devise'
 gem 'redcarpet'
+gem 'rack-cors', :require => 'rack/cors'
 
 # Uploading
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
