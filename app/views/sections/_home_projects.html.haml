@@ -5,4 +5,4 @@
         = link_to page_kid_path(kid) do
           - if kid.images.count > 0
             = image_tag attachment_url(kid.images.first, :file, :fit, 300, 300, format: "jpg")
-          Some kid
+          = kid.name

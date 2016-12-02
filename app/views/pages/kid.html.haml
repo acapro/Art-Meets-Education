@@ -10,5 +10,8 @@
   %article
     - @kid.images.each do |image|
       = image_tag attachment_url(image, :file, format: "jpg")
+    - if @kid.video and @kid.video.length > 0
+      .responsive-video
+        %iframe{:allowfullscreen => "", :frameborder => "0", :height => "900", :mozallowfullscreen => "", src: @kid.video, :webkitallowfullscreen => "", :width => "1600"}
 %hr
 = render 'sections/project', project: @kid.project
