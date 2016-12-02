@@ -1,10 +1,10 @@
 %nav
   %ul
-    = nav_link 'Über AME', page_abouts_path, action: 'about'
-    = nav_link 'Projekte', page_projects_path, action: 'project'
+    = nav_link t('nav.about'), page_abouts_path, action: 'about'
+    = nav_link t('nav.projects'), page_projects_path, action: 'project'
     - if Exhibit.count > 0
-      = nav_link 'Ausstellungen', page_exhibits_path, action: 'exhibit'
-    = nav_link 'Shop', 'http://shop.artmeetseducation.de/', target: '_blank'
-    = nav_link 'Kontakt', page_contact_path, action: 'contact'
+      = nav_link t('nav.exhibition'), page_exhibits_path, action: 'exhibit'
+    = nav_link t('nav.shop'), 'http://shop.artmeetseducation.de/', target: '_blank'
+    = nav_link t('nav.contact'), page_contact_path, action: 'contact'
     - if PressSection.count > 0
-      = nav_link 'Presse', page_presses_path, action: 'press'
+      = nav_link t('nav.press'), page_presses_path, action: 'press'
