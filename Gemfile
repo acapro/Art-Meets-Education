@@ -11,6 +11,7 @@ gem 'country_select'
 gem 'devise'
 gem 'redcarpet'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-canonical-host'
 
 # Uploading
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
