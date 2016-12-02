@@ -11,7 +11,7 @@
       %tr
         %td= about_section.path
         %td= about_section.nav
-        %td= about_section.content.truncate(40)
+        %td= about_section.content
         %td= link_to 'Show', about_section
         %td= link_to 'Edit', edit_about_section_path(about_section)
         %td= link_to 'Destroy', about_section, method: :delete, data: { confirm: 'Are you sure?' }

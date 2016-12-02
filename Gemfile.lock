@@ -133,6 +133,8 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
+    hstore_translate (1.0.0)
+      activerecord (>= 3.1.0)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -276,6 +278,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-jdbcpostgresql-adapter
   annotate
   autoprefixer-rails
   bourbon!
@@ -287,6 +290,7 @@ DEPENDENCIES
   figaro
   font-awesome-rails
   haml
+  hstore_translate
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

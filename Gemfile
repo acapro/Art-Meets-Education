@@ -12,6 +12,8 @@ gem 'devise'
 gem 'redcarpet'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rack-canonical-host'
+gem 'activerecord-jdbcpostgresql-adapter', :platform => :jruby
+gem 'hstore_translate'
 
 # Uploading
 gem 'refile', github: 'refile/refile', require: 'refile/rails'

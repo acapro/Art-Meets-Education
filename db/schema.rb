@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202134220) do
+ActiveRecord::Schema.define(version: 20161202155545) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20161202134220) do
     t.string   "path"
     t.string   "nav"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.hstore   "nav_translations"
+    t.hstore   "content_translations"
   end
 
   create_table "admins", force: :cascade do |t|
