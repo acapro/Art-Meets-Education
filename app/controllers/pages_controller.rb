@@ -51,6 +51,10 @@ class PagesController < ApplicationController
     @contacts = Contact.all.order(:created_at)
   end
 
+  def redirect
+    redirect_to root_url
+  end
+
   private
   def get_projects
     @projects = Project.order(year: :desc)
