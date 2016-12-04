@@ -31,4 +31,9 @@ module ApplicationHelper
 
     markdown.render(text).html_safe
   end
+
+  def lang_switcher(text, locale)
+    link_class = I18n.locale == locale ? 'active-lang' : ''
+    link_to text, {locale: locale}, class: link_class
+  end
 end
