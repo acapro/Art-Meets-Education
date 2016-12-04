@@ -2,7 +2,7 @@
   = f.error_notification
   .form-inputs
     = f.input :path
-    = f.input :nav
-    = f.input :content
+    = f.input :nav, label: 'Nav text, multi language'
+    = f.input :content, label: 'Content, multi language'
   .form-actions
     = f.button :submit

@@ -11,10 +11,11 @@
 %p
   %strong Slum:
   = @project.slum
-%p
-  %strong Description:
-  = markdown(@project.content)
-  
+- if @project.content
+  %p
+    %strong Description - multi lang:
+    = markdown(@project.content)
+
 = link_to 'Edit', edit_project_path(@project)
 |
 = link_to 'View all projects', projects_path

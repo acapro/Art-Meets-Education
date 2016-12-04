@@ -15,4 +15,5 @@
 class Project < ApplicationRecord
   has_many :kids
   validates :year, :country, :city, :slum, :content, presence: true
+  translates :content
 end

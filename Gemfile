@@ -14,6 +14,7 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'rack-canonical-host'
 gem 'activerecord-jdbcpostgresql-adapter', :platform => :jruby
 gem 'hstore_translate'
+gem 'rails-i18n'
 
 # Uploading
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
