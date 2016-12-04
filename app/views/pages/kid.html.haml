@@ -5,7 +5,7 @@
       %p= markdown(@kid.content)
     .prev_next
       = prev_kid(@kid)
-      = link_to 'schließen', page_project_path(@kid.project), class: 'close'
+      = link_to t('nav.close'), page_project_path(@kid.project), class: 'close'
       = next_kid(@kid)
   %article
     - @kid.images.each do |image|

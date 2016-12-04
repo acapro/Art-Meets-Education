@@ -1,6 +1,6 @@
 %section.team
   %aside
-    %h1 Über AME
+    %h1= t('nav.about')
     = render 'components/about_nav'
   %article
     .team
@@ -11,4 +11,5 @@
             = team_member.name
             %br
             = team_member.origin
-            = markdown(team_member.content)
+            - if team_member.content
+              = markdown(team_member.content)

@@ -6,3 +6,6 @@ en:
     shop: 'Shop'
     contatct: 'Contact'
     press: 'Press'
+    close: 'close'
+    next: 'next'
+    prev: 'previous'

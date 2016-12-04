@@ -1,6 +1,7 @@
 %section.about
   %aside
-    %h1 Über AME
+    %h1= t('nav.about')
     = render 'components/about_nav'
   %article
-    = markdown(@about_section.content)
+    - if @about_section.content
+      = markdown(@about_section.content)

@@ -1,16 +1,16 @@
 module KidsHelper
   def prev_kid(kid)
     if @kid.prev
-      link_to 'zurück', page_kid_path(@kid.prev)
+      link_to t('nav.prev'), page_kid_path(@kid.prev)
     else
-      'zurück'
+      t('nav.prev')
     end
   end
   def next_kid(kid)
     if @kid.next
-      link_to 'weiter', page_kid_path(@kid.next)
+      link_to t('nav.next'), page_kid_path(@kid.next)
     else
-      'weiter'
+      t('nav.next')
     end
   end
 end

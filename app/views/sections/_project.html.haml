@@ -1,6 +1,6 @@
 %section.project
   %aside
-    %h1 Projekte
+    %h1= t('nav.projects')
     %ul
       - project_by_year(@projects).each do |year, projects|
         %li= year.strftime("%Y")
