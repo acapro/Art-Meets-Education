@@ -14,4 +14,5 @@
 class Team < ApplicationRecord
   attachment :profile_image
   validates :name, :origin, :content, :profile_image, presence: true
+  translates :origin, :content
 end

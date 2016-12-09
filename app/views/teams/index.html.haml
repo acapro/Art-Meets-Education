@@ -13,7 +13,10 @@
         %td= image_tag attachment_url(team, :profile_image, :fit, 50, 50, format: "jpg")
         %td= team.name
         %td= team.origin
-        %td= team.content.truncate(40)
+        - if team.content
+          %td= team.content.truncate(40)
+        - else
+          %td= team.content
         %td= link_to 'Show', team
         %td= link_to 'Edit', edit_team_path(team)
         %td= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }

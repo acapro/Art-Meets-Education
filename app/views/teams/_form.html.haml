@@ -2,8 +2,8 @@
   = f.error_notification
   .form-inputs
     = f.input :name
-    = f.input :origin
-    = f.input :content
+    = f.input :origin, label: 'Origin, Multi language'
+    = f.input :content, label: 'Content, Multi language'
     - if @team.profile_image
       = image_tag attachment_url(@team, :profile_image, :fit, 300, 300, format: "jpg")
     = f.input :profile_image, as: :attachment, presigned: true
