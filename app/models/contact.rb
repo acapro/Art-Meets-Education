@@ -9,4 +9,6 @@
 #
 
 class Contact < ApplicationRecord
+  validates :section, presence: true
+  translates :section
 end

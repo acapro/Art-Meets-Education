@@ -8,7 +8,10 @@
   %tbody
     - @contacts.each do |contact|
       %tr
-        %td= contact.section.truncate(40)
+        - if contact.section
+          %td= contact.section.truncate(40)
+        - else
+          %td
         %td= link_to 'Show', contact
         %td= link_to 'Edit', edit_contact_path(contact)
         %td= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }

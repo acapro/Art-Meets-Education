@@ -1,6 +1,7 @@
 %p
   %strong Section:
-  = @contact.section
+  - if @contact.section
+    = markdown(@contact.section)
 = link_to 'Edit', edit_contact_path(@contact)
 |
 = link_to 'Back', contacts_path
