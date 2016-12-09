@@ -6,7 +6,8 @@
   = @team.origin
 %p
   %strong Content:
-  = markdown(@team.content)
+  - if @team.content
+    = markdown(@team.content)
 = image_tag attachment_url(@team, :profile_image, :fit, 300, 300, format: "jpg")
 %br
 = link_to 'Edit', edit_team_path(@team)
