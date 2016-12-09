@@ -1,9 +1,9 @@
 = simple_form_for [@project, kid] do |f|
   = f.error_notification
   = f.input :name
-  = f.input :short
+  = f.input :short, label: 'Short Description, multi language'
   = f.input :video, label: 'Vimeo Link, Format: http://player.vimeo.com/video/193671776'
-  = f.input :content
+  = f.input :content, label: 'Content, multi language'
 
   %h2 Images
   - kid.images.each do |image|
