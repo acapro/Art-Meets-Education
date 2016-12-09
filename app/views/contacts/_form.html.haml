@@ -1,6 +1,6 @@
 = simple_form_for(@contact) do |f|
   = f.error_notification
   .form-inputs
-    = f.input :section
+    = f.input :section, label: 'section text, multi lang'
   .form-actions
     = f.button :submit
