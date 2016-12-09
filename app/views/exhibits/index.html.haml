@@ -3,13 +3,16 @@
   %thead
     %tr
       %th Location
-      %th Content
+      %th Content (multi lang)
       %th{:colspan => "3"}
   %tbody
     - @exhibits.each do |exhibit|
       %tr
         %td= exhibit.location
-        %td= exhibit.content.truncate(40)
+        - if exhibit.content
+          %td= exhibit.content.truncate(40)
+        - else
+          %td= exhibit.content
         %td= link_to 'Show', exhibit
         %td= link_to 'Edit', edit_exhibit_path(exhibit)
         %td= link_to 'Destroy', exhibit, method: :delete, data: { confirm: 'Are you sure?' }

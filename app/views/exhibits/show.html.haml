@@ -3,10 +3,12 @@
   = @exhibit.location
 %p
   %strong Content:
-  = markdown(@exhibit.content)
+  - if @exhibit.content
+    = markdown(@exhibit.content)
 %p
   %strong Image:
-  = image_tag attachment_url(@exhibit, :info_image, :fit, 300, 300, format: "jpg")
+  - if @exhibit.info_image
+    = image_tag attachment_url(@exhibit, :info_image, :fit, 300, 300, format: "jpg")
 = link_to 'Edit', edit_exhibit_path(@exhibit)
 |
 = link_to 'Back', exhibits_path

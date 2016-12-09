@@ -13,4 +13,5 @@
 class Exhibit < ApplicationRecord
   attachment :info_image
   validates :location, :content, presence: true
+  translates :content
 end

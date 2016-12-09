@@ -8,4 +8,5 @@
 
   %article
     = markdown(@exhibit.content)
-    = image_tag attachment_url(@exhibit, :info_image, format: "jpg")
+    - if @exhibit.info_image
+      = image_tag attachment_url(@exhibit, :info_image, format: "jpg")

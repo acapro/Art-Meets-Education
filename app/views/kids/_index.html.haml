@@ -5,6 +5,7 @@
       %th Name
       %th Short Description
       %th Images
+      %th Content (Multi lang)
       %th{:colspan => "3"}
   %tbody
     - kids.each do |kid|
@@ -12,6 +13,10 @@
         %td= kid.name
         %td= kid.short
         %td= kid.images.count
+        - if kid.content
+          %td= kid.content.truncate(40)
+        - else
+          %td
         %td= link_to 'Show', kid
         %td= link_to 'Edit', edit_kid_path(kid)
         %td= link_to 'Destroy', kid, method: :delete, data: { confirm: 'Are you sure?' }
