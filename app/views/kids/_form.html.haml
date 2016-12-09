@@ -1,7 +1,7 @@
 = simple_form_for [@project, kid] do |f|
   = f.error_notification
   = f.input :name
-  = f.input :short, label: 'Short Description, multi language'
+  = f.input :short
   = f.input :video, label: 'Vimeo Link, Format: http://player.vimeo.com/video/193671776'
   = f.input :content, label: 'Content, multi language'
 

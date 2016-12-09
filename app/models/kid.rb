@@ -16,7 +16,7 @@ class Kid < ApplicationRecord
   has_many :images, dependent: :destroy
   accepts_attachments_for :images, attachment: :file, append: true
   validates :name, presence: true
-  translates :content, :short
+  translates :content
 
   def next
     return Kid.where("id > ?", self.id).first

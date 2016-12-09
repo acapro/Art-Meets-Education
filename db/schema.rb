@@ -73,7 +73,6 @@ ActiveRecord::Schema.define(version: 20161209110859) do
     t.string   "short"
     t.text     "content"
     t.string   "video"
-    t.hstore   "short_translations"
     t.hstore   "content_translations"
     t.index ["project_id"], name: "index_kids_on_project_id", using: :btree
   end
