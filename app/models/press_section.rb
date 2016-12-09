@@ -13,4 +13,5 @@
 class PressSection < ApplicationRecord
   validates :path, :nav, :content, presence: true
   validates :path, format: {with: /\A[a-z0-9_\-]+\z/, message: "URL -> Only undercase / no spaces / no special symbols"}
+  translates :nav, :content
 end
