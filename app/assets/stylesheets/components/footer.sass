@@ -1,23 +1,26 @@
 footer
   background-color: white
-  position: fixed
-  bottom: 0
-  left: 0
-  width: 100%
-  +media($large)
-    z-index: 2
-  +media($tablet)
-    z-index: 2
-  +media($mobile)
-    z-index: 0
-    position: relative
+  position: relative
+  margin-top: $base-spacing
+  +span-columns(12)
+  // position: fixed
+  // bottom: 0
+  // left: 0
+  // width: 100%
+  // +media($large)
+  //   z-index: 2
+  // +media($tablet)
+  //   z-index: 2
+  // +media($mobile)
+  //   z-index: 0
+  //   position: relative
   .content
-    +media($large)
-      padding: 0 $base-spacing*2
-    +media($tablet)
-      padding: 0 $base-spacing*2
-    +media($mobile)
-      padding: 0
+    // +media($large)
+    //   padding: 0 $base-spacing*2
+    // +media($tablet)
+    //   padding: 0 $base-spacing*2
+    // +media($mobile)
+    //   padding: 0
     ul
       .break
         display: none

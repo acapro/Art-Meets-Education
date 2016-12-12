@@ -3,12 +3,15 @@ body
   +media($large)
     padding: $base-spacing $base-spacing*2
     padding-top: 200px
+    padding-bottom: 0px
   +media($tablet)
     padding: $small-spacing $base-spacing*2
     padding-top: 100px
+    padding-bottom: 0px
   +media($mobile)
     padding: $small-spacing
     padding-top: 100px
+    padding-bottom: 0px
   margin: 0
   #bg-color
     position: fixed
@@ -20,9 +23,9 @@ body
   .page
     position: relative
     z-index: 1
-  +media($large)
-    margin-bottom: $base-spacing*3
-  +media($tablet)
-    margin-bottom: $base-spacing*3
-  +media($mobile)
-    margin-bottom: 0px
+  // +media($large)
+  //   margin-bottom: $base-spacing*3
+  // +media($tablet)
+  //   margin-bottom: $base-spacing*3
+  // +media($mobile)
+  //   margin-bottom: 0px
