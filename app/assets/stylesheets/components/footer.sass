@@ -1,0 +1,36 @@
+footer
+  background-color: white
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  z-index: 2
+  +media($mobile)
+    position: relative
+  .content
+    +media($tablet)
+      padding: 0 $base-spacing*2
+    +media($mobile)
+      padding: 0 $small-spacing
+    ul
+      .break
+        display: none
+      padding: $small-spacing/2 0
+      +media($tablet)
+        display: flex
+        justify-content: space-between
+        list-style: none
+      li
+        display: inline-block
+        a
+          margin-left: $small-spacing
+      +media($mobile)
+        .break
+          display: block
+        +outer-container()
+        li
+          +span-columns(2)
+          a
+            margin-left: 0px
+          &:last-child
+            text-align: right

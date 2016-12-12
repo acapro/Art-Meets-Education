@@ -9,3 +9,5 @@ de:
     close: 'schließen'
     next: 'weiter'
     prev: 'zurück'
+  footer:
+    contact: 'Bleib in Kontakt:'

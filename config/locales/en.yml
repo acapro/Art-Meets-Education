@@ -9,3 +9,5 @@ en:
     close: 'close'
     next: 'next'
     prev: 'previous'
+  footer:
+    contact: 'Stay in Contact:'
