@@ -1,10 +1,10 @@
 %section.splash
   #slider
     - kids.each do |kid|
-      .cell
-        - if kid.images.count > 0
+      - if kid.images.count > 0
+        .cell
           = image_tag attachment_url(kid.images.first, :file, :fit, 1000, 1000, format: "jpg")
-        %h2
-          = kid.name
-          %small= kid.short
+          %h2
+            = kid.name
+            %small= kid.short
   %hr
