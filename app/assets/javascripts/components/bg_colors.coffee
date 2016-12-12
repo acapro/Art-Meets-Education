@@ -8,7 +8,7 @@ change_color_elements = (color) ->
   $('#bg-color').css('background-color', color)
   $('#header-container').css('background-color', color)
   $('#header-container nav').css('background-color', color)
-  $('footer').css('background-color', color)
+  $('#footer').css('background-color', color)
 
 bg_color_change = ->
   current_color = $('#pop-out').css('background-color')
