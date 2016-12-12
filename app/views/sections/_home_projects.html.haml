@@ -5,4 +5,6 @@
         = link_to page_kid_path(kid) do
           - if kid.images.count > 0
             = image_tag attachment_url(kid.images.first, :file, :fit, 300, 300, format: "jpg")
+          - elsif kid.video and kid.video.length > 0
+            = get_vimeo_thumb(kid.video)
           = kid.name
