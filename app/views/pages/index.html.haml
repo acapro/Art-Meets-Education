@@ -1,6 +1,6 @@
 %h1
-  Art Meets Education Headline
-  %small Kurze Beschreibung, was Art Meets Education macht
+  = t('pages.headline')
+  %small= t('pages.slogan')
 
 = render 'sections/splash', kids: @featured_kids
 = render partial: 'sections/who_we_are'
