@@ -4,8 +4,12 @@ footer
   bottom: 0
   left: 0
   width: 100%
-  z-index: 2
+  +media($large)
+    z-index: 2
+  +media($tablet)
+    z-index: 2
   +media($mobile)
+    z-index: 0
     position: relative
   .content
     +media($large)
@@ -13,7 +17,7 @@ footer
     +media($tablet)
       padding: 0 $base-spacing*2
     +media($mobile)
-      padding: 0 $small-spacing
+      padding: 0
     ul
       .break
         display: none

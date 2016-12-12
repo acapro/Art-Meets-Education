@@ -2,12 +2,13 @@
 #
 # Table name: exhibits
 #
-#  id            :integer          not null, primary key
-#  location      :string
-#  content       :text
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#  info_image_id :string
+#  id                   :integer          not null, primary key
+#  location             :string
+#  content              :text
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  info_image_id        :string
+#  content_translations :hstore
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -2,13 +2,15 @@
 #
 # Table name: kids
 #
-#  id         :integer          not null, primary key
-#  name       :string
-#  project_id :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  short      :string
-#  content    :text
+#  id                   :integer          not null, primary key
+#  name                 :string
+#  project_id           :integer
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  short                :string
+#  content              :text
+#  video                :string
+#  content_translations :hstore
 #
 
 require 'test_helper'

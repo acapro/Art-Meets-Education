@@ -1,11 +1,14 @@
 body
   +outer-container(100%)
-  padding: $base-spacing $base-spacing*2
-  padding-top: 200px
+  +media($large)
+    padding: $base-spacing $base-spacing*2
+    padding-top: 200px
+  +media($tablet)
+    padding: $small-spacing $base-spacing*2
+    padding-top: 100px
   +media($mobile)
     padding: $small-spacing
     padding-top: 100px
-  height: 100%
   margin: 0
   #bg-color
     position: fixed
@@ -17,3 +20,9 @@ body
   .page
     position: relative
     z-index: 1
+  +media($large)
+    margin-bottom: $base-spacing*3
+  +media($tablet)
+    margin-bottom: $base-spacing*3
+  +media($mobile)
+    margin-bottom: 0px
