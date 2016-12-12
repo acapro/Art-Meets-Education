@@ -6,11 +6,20 @@ module KidsHelper
       t('nav.prev')
     end
   end
+
   def next_kid(kid)
     if @kid.next
       link_to t('nav.next'), page_kid_path(@kid.next)
     else
       t('nav.next')
     end
+  end
+  
+  def get_vimeo_thumb(video_url)
+    vimeo_video_id           = video_url.split('/').last
+    vimeo_video_json_url     = "http://vimeo.com/api/v2/video/%s.json" % vimeo_video_id   # API call
+    # Parse the JSON and extract the thumbnail_large url
+    thumbnail_image_location = JSON.parse(open(vimeo_video_json_url).read).first['thumbnail_large'] rescue nil
+    return image_tag thumbnail_image_location
   end
 end
