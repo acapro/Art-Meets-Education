@@ -20,6 +20,7 @@ class PagesController < ApplicationController
   end
 
   def partners
+    @partners = Partner.all
   end
 
   def project

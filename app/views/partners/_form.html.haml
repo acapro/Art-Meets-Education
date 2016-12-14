@@ -1,0 +1,9 @@
+= simple_form_for(@partner) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :url, label: 'URL, format: http://www.example.com'
+    - if @partner.logo
+      = image_tag attachment_url(@partner, :logo, :fit, 300, 300, format: "png")
+    = f.input :logo, as: :attachment, presigned: true
+  .form-actions
+    = f.button :submit

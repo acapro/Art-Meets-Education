@@ -1,0 +1,19 @@
+%h1 Partners
+%table
+  %thead
+    %tr
+      %th Logo
+      %th Url
+      %th{:colspan => "3"}
+  %tbody
+    - @partners.each do |partner|
+      %tr
+        %td
+          - if partner.logo
+            = image_tag attachment_url(partner, :logo, :fit, 100, 100, format: "png")
+        %td= partner.url
+        %td= link_to 'Show', partner
+        %td= link_to 'Edit', edit_partner_path(partner)
+        %td= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Partner', new_partner_path

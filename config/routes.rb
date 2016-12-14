@@ -27,6 +27,7 @@ Rails.application.routes.draw do
     resources :exhibits
     resources :contacts
     resources :donations
+    resources :partners
     resources :images, only: [:destroy]
   end
 

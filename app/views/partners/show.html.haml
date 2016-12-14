@@ -1,0 +1,10 @@
+%p
+  %strong Url:
+  %br
+  = link_to @partner.url, @partner.url, target: '_blank'
+  %br
+  - if @partner.logo
+    = image_tag attachment_url(@partner, :logo, format: "png")
+= link_to 'Edit', edit_partner_path(@partner)
+|
+= link_to 'Back', partners_path
