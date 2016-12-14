@@ -10,4 +10,5 @@
 
 class Donation < ApplicationRecord
   validates :content, presence: true
+  translates :content
 end
