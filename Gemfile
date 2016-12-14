@@ -15,6 +15,7 @@ gem 'rack-canonical-host'
 gem 'activerecord-jdbcpostgresql-adapter', :platform => :jruby
 gem 'hstore_translate'
 gem 'rails-i18n'
+gem 'http_accept_language'
 
 # Uploading
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
