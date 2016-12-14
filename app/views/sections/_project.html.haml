@@ -1,13 +1,16 @@
 %section.project
   %aside
-    %h1= t('nav.projects')
-    %ul
-      - project_by_year(@projects).each do |year, projects|
-        %li= year.strftime("%Y")
-        %ul.sub
-          - projects.each do |proj|
-            = project_sub_link "#{proj.city} - #{proj.slum}", proj, project
+    .text
+      %h1= t('nav.projects')
+      %nav
+        %ul
+          - project_by_year(@projects).each do |year, projects|
+            %li= year.strftime("%Y")
+            %ul.sub
+              - projects.each do |proj|
+                = project_sub_link "#{proj.city} - #{proj.slum}", proj, project
   %article
-    - if project.content
-      = markdown(project.content)
+    .text
+      - if project.content
+        = markdown(project.content)
     = render 'sections/kids', project: project

@@ -1,10 +1,12 @@
 %section.press
   %aside
-    %h1= t('nav.press')
-    %nav
-      %ul
-        - @press_sections.each do |section|
-          = press_sub_link section.nav, section, @press_section
+    .text
+      %h1= t('nav.press')
+      %nav
+        %ul
+          - @press_sections.each do |section|
+            = press_sub_link section.nav, section, @press_section
   %article
-    - if @press_section.content
-      = markdown(@press_section.content)
+    .text
+      - if @press_section.content
+        = markdown(@press_section.content)

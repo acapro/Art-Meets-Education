@@ -27,7 +27,7 @@ $('#pop-out').ready ->
 document.addEventListener 'turbolinks:load', ->
   pop_out_click_handler()
   window.waitForFinalEvent (->
-    if $('section.splash')[0] && window.width() > 992
+    if $('section.splash')[0] && $(window).width() > 992
       $('#pop-out').removeClass('closed')
       unless window.pop_out_scene.enabled()
         set_pop_out_scroll()

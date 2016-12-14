@@ -1,12 +1,13 @@
 %section.kid
   %aside
-    %h1= @kid.name
-    - if @kid.content
-      %p= markdown(@kid.content)
-    .prev_next
-      = prev_kid(@kid)
-      = link_to t('nav.close'), page_project_path(@kid.project), class: 'close'
-      = next_kid(@kid)
+    .text
+      %h1= @kid.name
+      - if @kid.content
+        %p= markdown(@kid.content)
+      .prev_next
+        = prev_kid(@kid)
+        = link_to t('nav.close'), page_project_path(@kid.project), class: 'close'
+        = next_kid(@kid)
   %article
     - @kid.images.each do |image|
       = image_tag attachment_url(image, :file, format: "jpg")

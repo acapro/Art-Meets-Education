@@ -1,12 +1,14 @@
 %section.exhibit
   %aside
-    %h1= t('nav.exhibition')
-    %nav
-      %ul
-        - @exhibits.each do |exhibit|
-          = exhibit_sub_link exhibit.location, exhibit, @exhibit
+    .text
+      %h1= t('nav.exhibition')
+      %nav
+        %ul
+          - @exhibits.each do |exhibit|
+            = exhibit_sub_link exhibit.location, exhibit, @exhibit
 
   %article
-    = markdown(@exhibit.content)
+    .text
+      = markdown(@exhibit.content)
     - if @exhibit.info_image
       = image_tag attachment_url(@exhibit, :info_image, format: "jpg")

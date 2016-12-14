@@ -16,10 +16,21 @@ section
 
 section.home-projects
   margin: $base-spacing 15%
+  +media($mobile)
+    margin: $base-spacing 0
 
 section.project, section.about, section.team, section.press, section.exhibit, section.contact, section.donate, section.partners
+  aside
+    +media($mobile)
+      h1
+        margin-bottom: $small-spacing
+    nav
+      margin-bottom: $base-spacing
+
   article
     margin-top: $base-spacing*1.4
+    +media($mobile)
+      margin-top: 0px
     h1, h2, h3, h4
       &:first-child
         margin-top: 0px
@@ -37,11 +48,13 @@ section.who-we-are
   display: flex
   flex-flow: wrap row
   margin: $base-spacing 15%
+  +media($mobile)
+    margin: $base-spacing 0
+    padding-right: $base-spacing
   a
     margin-top: $base-spacing/2
 
 section.kid
-  min-height: 100vh
   .prev_next
     color: rgba($dark-gray, 0.3)
     .close
@@ -51,3 +64,7 @@ section.kid
     img
       width: 100%
       margin-bottom: $base-spacing
+
+.text
+  +media($mobile)
+    padding-right: $base-spacing

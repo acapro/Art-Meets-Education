@@ -1,7 +1,9 @@
 %section.contact
   %aside
-    %h1= t('nav.contact')
+    .text
+      %h1= t('nav.contact')
   %article
-    - @contacts.each do |contact|
-      - if contact.section
-        = markdown(contact.section)
+    .text
+      - @contacts.each do |contact|
+        - if contact.section
+          = markdown(contact.section)
