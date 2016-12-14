@@ -1,0 +1,6 @@
+= simple_form_for(@donation) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :content
+  .form-actions
+    = f.button :submit

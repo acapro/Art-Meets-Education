@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/kids/:id', to: 'pages#kid', as: :page_kid
   get '/contact', to: 'pages#contact', as: :page_contact
   get '/redirect', to: 'pages#redirect', as: :redirect
+  get '/donate', to: 'pages#donate', as: :page_donate
 
   get '/admin' => 'projects#index'
   scope '/admin' do
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
     resources :press_sections
     resources :exhibits
     resources :contacts
+    resources :donations
     resources :images, only: [:destroy]
   end
 

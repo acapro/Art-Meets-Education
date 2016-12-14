@@ -55,6 +55,10 @@ class PagesController < ApplicationController
     redirect_to root_url
   end
 
+  def donate
+    @donations = Donation.all.order(:created_at)
+  end
+
   private
   def get_projects
     @projects = Project.order(year: :desc)
