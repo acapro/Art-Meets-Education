@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/press' => 'pages#presses', as: :page_presses
   get '/press/:path' => 'pages#press', as: :page_press
   get '/team' => 'pages#team', as: :page_team
+  get '/partners' => 'pages#partners', as: :page_partners
   get '/projects' => 'pages#projects', as: :page_projects
   get '/projects/:id', to: 'pages#project', as: :page_project
   get '/kids/:id', to: 'pages#kid', as: :page_kid

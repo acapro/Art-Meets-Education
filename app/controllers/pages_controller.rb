@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   before_action :get_projects
-  before_action :about_sections, only: [:about, :team]
+  before_action :about_sections, only: [:about, :team, :partners]
 
   def index
     @featured_kids = Kid.limit(9).order("RANDOM()")
@@ -17,6 +17,9 @@ class PagesController < ApplicationController
   def team
     @team_members = Team.all
     @about_section = nil
+  end
+
+  def partners
   end
 
   def project

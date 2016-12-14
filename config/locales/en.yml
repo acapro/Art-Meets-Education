@@ -9,6 +9,8 @@ en:
     close: 'close'
     next: 'next'
     prev: 'previous'
+    team: 'Team'
+    partners: 'Our Partners'
   footer:
     contact: 'Stay in contact:'
   pages:

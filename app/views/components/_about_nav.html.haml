@@ -2,4 +2,7 @@
   %ul
     - @about_sections.each do |section|
       = about_sub_link section.nav, section, @about_section
-    = link_to 'Team', page_team_path, class: current_page?(page_team_path) ? 'active' : ''
+    %li= link_to t('nav.partners'), page_partners_path,
+                                      class: current_page?(page_partners_path) ? 'active' : ''
+    %li= link_to t('pages.team'), page_team_path,
+                                  class: current_page?(page_team_path) ? 'active' : ''
