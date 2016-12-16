@@ -13,4 +13,5 @@
     .text
       - if project.content
         = markdown(project.content)
+    %br
     = render 'sections/kids', project: project
