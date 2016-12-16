@@ -1,15 +1,13 @@
 # == Schema Information
 #
-# Table name: partners
+# Table name: press_kits
 #
 #  id         :integer          not null, primary key
-#  url        :string
+#  title      :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  logo_id    :string
 #
 
-class Partner < ApplicationRecord
-  attachment :logo
-  validates :url, :logo, presence: true
+class PressKit < ApplicationRecord
+  validates :title, presence: true
 end

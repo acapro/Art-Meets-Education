@@ -34,7 +34,7 @@ class PagesController < ApplicationController
   end
 
   def press
-    
+    @press_kits = PressKit.all.order(:created_at)
   end
 
   def exhibits

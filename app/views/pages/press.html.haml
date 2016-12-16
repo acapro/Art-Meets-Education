@@ -7,7 +7,11 @@
   %article
     .text
       %p= t('pages.press.kit')
-      %p= t('pages.press.kit-description')
+      %p
+        = t('pages.press.kit-description')
+        - @press_kits.each do |kit|
+          %br
+          = link_to kit.title, '#'
       %br
       %p= t('pages.press.interview')
       %p= t('pages.press.interview-description')
