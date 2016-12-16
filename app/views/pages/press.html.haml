@@ -9,9 +9,9 @@
       %p= t('pages.press.kit')
       %p
         = t('pages.press.kit-description')
-        - @press_kits.each do |kit|
+        - @press_kits.each do |press_kit|
           %br
-          = link_to kit.title, '#'
+          = file_link(press_kit)
       %br
       %p= t('pages.press.interview')
       %p= t('pages.press.interview-description')

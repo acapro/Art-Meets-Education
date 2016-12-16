@@ -1,0 +1,7 @@
+= simple_form_for(@press_kit) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :title
+    = f.input :kit, as: :attachment, presigned: true
+  .form-actions
+    = f.button :submit

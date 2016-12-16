@@ -1,0 +1,17 @@
+%h1 Press Kits
+%table
+  %thead
+    %tr
+      %th Title
+      %th Kit
+      %th{:colspan => "3"}
+  %tbody
+    - @press_kits.each do |press_kit|
+      %tr
+        %td= press_kit.title
+        %td= file_link(press_kit)
+        %td= link_to 'Show', press_kit
+        %td= link_to 'Edit', edit_press_kit_path(press_kit)
+        %td= link_to 'Destroy', press_kit, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Press Kit', new_press_kit_path

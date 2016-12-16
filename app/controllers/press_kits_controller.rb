@@ -71,6 +71,6 @@ class PressKitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def press_kit_params
-      params.require(:press_kit).permit(:title)
+      params.require(:press_kit).permit(:title, :kit)
     end
 end
