@@ -1,12 +1,24 @@
 %section.press
   %aside
     .text
-      %h1= t('nav.press')
-      %nav
-        %ul
-          - @press_sections.each do |section|
-            = press_sub_link section.nav, section, @press_section
+      %h1= t('pages.press.title')
+      %h2= t('pages.press.description')
+
   %article
     .text
-      - if @press_section.content
-        = markdown(@press_section.content)
+      %p= t('pages.press.kit')
+      %p= t('pages.press.kit-description')
+      %br
+      %p= t('pages.press.interview')
+      %p= t('pages.press.interview-description')
+      %p
+        = t('pages.press.speaker')
+        Sascha Decker
+        %br
+        = t('pages.press.tel')
+        0228 / 2092 - 392
+        %br
+        Fax:
+        0228 / 2092 - 333
+        %br
+        = mail_to 'sascha.decker@aktion-mensch.de'

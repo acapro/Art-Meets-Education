@@ -20,3 +20,12 @@ de:
     more_info: 'Mehr erfahren...'
     short_about: 'Art Meets Education ist eine Organisation, welches Bildung durch Fotografie ermöglicht. Kinder aus finanziell benachteiligten Familien bekommen die Möglichkeit, eigenständig Kunst zu produzieren. Diese Kunst generiert finanzielle Mittel, welche in die Schulbildung der Kinder investiert wird. Die Fotografie soll zudem ein Medium sein, durch welches die Kinder ihre Gefühle kanalisieren und Erlebnisse aus ihrem alltäglichen Leben festhalten können.'
     donate: 'Spenden'
+    press:
+      title: 'Pressebereich'
+      description: 'Hier finden Sie Pressemitteilungen, Bilder und Services für Journalisten.'
+      kit: 'PRESSE-KIT'
+      kit-description: 'Unser Presse-Kit mit Bildern und Texten können sie hier zu folgenden Projekten herunterladen:'
+      interview: 'INTERVIEWS'
+      interview-description: 'Ein Interview mit AME? Gerne! Wir freuen uns über Ihre Anfrage.'
+      speaker: 'Pressesprecher:'
+      tel: 'Telefon:'

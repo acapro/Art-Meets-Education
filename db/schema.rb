@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161214125258) do
+ActiveRecord::Schema.define(version: 20161216102159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,16 +91,6 @@ ActiveRecord::Schema.define(version: 20161214125258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "logo_id"
-  end
-
-  create_table "press_sections", force: :cascade do |t|
-    t.string   "path"
-    t.string   "nav"
-    t.text     "content"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.hstore   "nav_translations"
-    t.hstore   "content_translations"
   end
 
   create_table "projects", force: :cascade do |t|

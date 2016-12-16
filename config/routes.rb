@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   get '/about/:path' => 'pages#about', as: :page_about
   get '/exhibits' => 'pages#exhibits', as: :page_exhibits
   get '/exhibits/:id' => 'pages#exhibit', as: :page_exhibit
-  get '/press' => 'pages#presses', as: :page_presses
-  get '/press/:path' => 'pages#press', as: :page_press
+  get '/press' => 'pages#press', as: :page_press
   get '/team' => 'pages#team', as: :page_team
   get '/partners' => 'pages#partners', as: :page_partners
   get '/projects' => 'pages#projects', as: :page_projects
