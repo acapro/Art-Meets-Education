@@ -3,6 +3,7 @@
     %h1= t('nav.about')
     = render 'components/about_nav'
   %article
-    - @partners.each do |partner|
-      = link_to partner.url, class: 'partner', target: '_blank' do
-        = image_tag attachment_url(partner, :logo, :fit, 300, 300, format: "png")
+    .gallery
+      - @partners.each do |partner|
+        = link_to partner.url, class: 'item', target: '_blank' do
+          = image_tag attachment_url(partner, :logo, :fit, 300, 300, format: "png")
