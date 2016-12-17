@@ -12,6 +12,7 @@ gem 'devise'
 gem 'redcarpet'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rack-canonical-host'
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
 gem 'activerecord-jdbcpostgresql-adapter', :platform => :jruby
 gem 'hstore_translate'
 gem 'rails-i18n'
