@@ -9,6 +9,9 @@
       %p= t('pages.press.kit')
       %p
         = t('pages.press.kit-description')
+        - if @press_kits.count == 0
+          %br
+          = t('pages.press.no-kit')
         - @press_kits.each do |press_kit|
           %br
           = file_link(press_kit)

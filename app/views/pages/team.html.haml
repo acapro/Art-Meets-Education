@@ -8,8 +8,9 @@
         .member
           .profile= image_tag attachment_url(team_member, :profile_image, :fit, 300, 300, format: "jpg")
           .info
-            = team_member.name
-            %br
-            = team_member.origin
-            - if team_member.content
-              = markdown(team_member.content)
+            .text
+              = team_member.name
+              %br
+              = team_member.origin
+              - if team_member.content
+                = markdown(team_member.content)

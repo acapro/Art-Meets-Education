@@ -29,6 +29,7 @@ en:
       interview-description: 'Do you want an interview with AME? No problem! We would be more than happy to meet your request.'
       speaker: 'Press spokesperson:'
       tel: 'Telephone:'
+      no-kit: 'There is currently no press-kit available.'
     contact:
       title: 'Contact, Address and Contact Person'
       description: 'If you wish to receive further information, please do not hesitate to contact us.'

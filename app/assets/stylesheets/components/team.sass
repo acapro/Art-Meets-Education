@@ -4,11 +4,22 @@
     vertical-align: text-top
     margin-bottom: $base-spacing
     .profile
-      +span-columns(3)
+      +media($large)
+        +span-columns(3)
+      +media($tablet)
+        +span-columns(2)
+      +media($mobile)
+        +span-columns(4)
       img
         width: 100%
         height: auto
         display: block
     .info
-      +span-columns(9)
-      +omega()
+      +media($large)
+        +span-columns(9)
+        +omega()
+      +media($tablet)
+        +span-columns(4)
+        +omega()
+      +media($mobile)
+        +span-columns(4)

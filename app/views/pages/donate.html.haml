@@ -1,7 +1,9 @@
 %section.donate
   %aside
-    %h1= t('pages.donate')
+    .text
+      %h1= t('pages.donate')
   %article
-    - @donations.each do |donation|
-      - if donation.content
-        = markdown(donation.content)
+    .text
+      - @donations.each do |donation|
+        - if donation.content
+          = markdown(donation.content)
