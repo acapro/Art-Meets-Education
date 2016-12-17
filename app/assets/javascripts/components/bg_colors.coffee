@@ -5,7 +5,7 @@ colors = ['rgb(30, 109, 118)',
 
 change_color_elements = (color) ->
   $('#pop-out').css('background-color', color)
-  $('#bg-color').css('background-color', color)
+  $('body').css('background-color', color)
   $('#header-container').css('background-color', color)
   $('#header-container nav').css('background-color', color)
   $('#footer').css('background-color', color)
@@ -17,8 +17,7 @@ bg_color_change = ->
   change_color_elements(new_color)
 
 bg_set_random_color = ->
-  random_color = colors[Math.floor(Math.random() * colors.length)]
-  change_color_elements(random_color)
+  window.random_color = colors[Math.floor(Math.random() * colors.length)]
 
 # document.addEventListener 'turbolinks:visit', ->
 #   window.waitForFinalEvent (->
@@ -27,3 +26,6 @@ bg_set_random_color = ->
 
 $('header').ready ->
   bg_set_random_color()
+
+document.addEventListener 'turbolinks:load', ->
+  change_color_elements(window.random_color)

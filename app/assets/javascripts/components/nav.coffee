@@ -16,9 +16,11 @@ $('header').ready ->
   nav_size()
   $('header a').on 'click touchstart', ->
     $nav.find("*").removeClass('active')
-    $(this).parent().addClass('active')
+    $(@).parent().addClass('active')
     $('#header-container nav').removeClass('show')
     $('#mobile-trigger').removeClass('active')
+    location = $(@).attr('href')
+    Turbolinks.visit(location)
     return
   $('#mobile-trigger').on 'click touchstart', ->
     $('#mobile-trigger').toggleClass('active')
