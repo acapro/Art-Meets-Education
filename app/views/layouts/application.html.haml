@@ -3,7 +3,10 @@
   %head
     %meta{:content => "width=device-width, initial-scale=1, user-scalable=no", :name => "viewport", "http-equiv" => "Content-Type"}/
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Ame
+    %meta{:content => "index, follow", :name => "robots"}/
+    %meta{:content => content_for?(:desc) ? yield(:desc) : t('site.description'), :name => "description"}/
+    %title Art Meets Education
+    = render 'application/favicon'
     = canonical_tag
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'

@@ -1,4 +1,6 @@
 en:
+  site:
+    description: 'We are an organisation, which educates through photography. Children from disadvantaged backgrounds are given the opportunity to produce their own works of art.'
   nav:
     about: 'About AME'
     projects: 'Projects'

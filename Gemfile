@@ -57,6 +57,7 @@ group :development do
   gem 'figaro'
   gem 'erb2haml'
   gem 'annotate'
+  gem 'rails_real_favicon'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

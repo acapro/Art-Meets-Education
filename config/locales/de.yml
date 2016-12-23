@@ -1,4 +1,6 @@
 de:
+  site:
+    description: 'Wir sind eine Organisation, die Bildung durch Fotografie ermöglicht. Kinder aus benachteiligten Familien bekommen die Möglichkeit, Kunst zu produzieren.'
   nav:
     about: 'Über AME'
     projects: 'Projekte'
