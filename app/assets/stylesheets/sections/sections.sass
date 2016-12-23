@@ -4,20 +4,26 @@ section.home-projects
     margin: $base-spacing 0
 
 section.project, section.about, section.team, section.kid, section.exhibit, section.donate, section.partners
+  +outer-container(100%)
   aside
     +media($mobile)
       +span-columns(4)
+      +omega()
     +media($tablet)
       +span-columns(6)
+      +omega()
     +media($large)
       +span-columns(3)
   article
     +media($mobile)
       +span-columns(4)
+      +omega()
     +media($tablet)
       +span-columns(6)
+      +omega()
     +media($large)
       +span-columns(9)
+      +omega()
   aside
     +media($mobile)
       h1
