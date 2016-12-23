@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admins
   root 'pages#index'
+  get '/sitemap' => 'pages#sitemap', format: :xml, as: :page_sitemap
   get '/about' => 'pages#abouts', as: :page_abouts
   get '/about/:path' => 'pages#about', as: :page_about
   get '/exhibits' => 'pages#exhibits', as: :page_exhibits

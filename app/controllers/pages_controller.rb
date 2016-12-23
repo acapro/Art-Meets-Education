@@ -58,6 +58,13 @@ class PagesController < ApplicationController
     @donations = Donation.all.order(:created_at)
   end
 
+  def sitemap
+    @about_sections = AboutSection.all.order(:created_at)
+    respond_to do |format|
+      format.xml
+    end
+  end
+
   private
   def get_projects
     @projects = Project.order(year: :desc)
