@@ -16,16 +16,18 @@
           %br
           = file_link(press_kit)
       %br
-      %p= t('pages.press.interview')
-      %p= t('pages.press.interview-description')
+      %p= t('pages.press.speaker').upcase
+      -# %p= t('pages.press.interview')
+      -# %p= t('pages.press.interview-description')
       %p
-        = t('pages.press.speaker')
-        Sascha Decker
+        Jana Seibert
         %br
-        = t('pages.press.tel')
-        0228 / 2092 - 392
+        = mail_to 'jana@artmeetseducation.de'
         %br
-        Fax:
-        0228 / 2092 - 333
+        +49 157 730 080 44
+      %p
+        Nico Klein-Allermann
         %br
-        = mail_to 'sascha.decker@aktion-mensch.de'
+        = mail_to 'nico@artmeetseducation.de'
+        %br
+        +49 176 203 094 72
