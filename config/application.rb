@@ -14,6 +14,7 @@ module Ame
     config.i18n.default_locale = :de
     config.i18n.available_locales = %w(en de)
     config.i18n.fallbacks = true
+    
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
