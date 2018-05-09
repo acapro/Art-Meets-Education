@@ -20,8 +20,13 @@ module KidsHelper
     vimeo_video_json_url     = "https://vimeo.com/api/v2/video/%s.json" % vimeo_video_id   # API call
     # Parse the JSON and extract the thumbnail_large url
     thumbnail_image_location = JSON.parse(open(vimeo_video_json_url).read).first['thumbnail_large'] rescue nil
-    url = URI.parse(thumbnail_image_location)
-    url.scheme = 'https'
-    return image_tag thumbnail_image_location
+    if thumbnail_image_location
+      encoded_url = URI.encode(thumbnail_image_location)
+      encoded_url = URI.parse(thumbnail_image_location)
+      encoded_url.scheme = 'https'
+      return image_tag thumbnail_image_location
+    else
+      return ''
+    end
   end
 end
