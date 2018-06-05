@@ -17,6 +17,7 @@ gem 'activerecord-jdbcpostgresql-adapter', :platform => :jruby
 gem 'hstore_translate'
 gem 'rails-i18n'
 gem 'http_accept_language'
+gem 'cookies_eu'
 
 # Uploading
 gem 'refile', github: 'refile/refile', require: 'refile/rails'

@@ -18,6 +18,7 @@
 //= require autosize.min.js
 //= require_tree ./modules
 //= require_tree ./components
+//= require cookies_eu
 
 
 document.addEventListener("turbolinks:load", function() {
