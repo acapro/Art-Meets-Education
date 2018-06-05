@@ -18,3 +18,13 @@
 //= require autosize.min.js
 //= require_tree ./modules
 //= require_tree ./components
+
+
+document.addEventListener("turbolinks:load", function() {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'UA-119191469-1', { 'anonymize_ip': true });
+})

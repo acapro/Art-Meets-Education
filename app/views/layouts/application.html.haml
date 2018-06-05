@@ -5,6 +5,7 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:content => "index, follow", :name => "robots"}/
     %meta{:content => content_for?(:desc) ? yield(:desc) : t('site.description'), :name => "description"}/
+    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-119191469-1"}
     %title Art Meets Education
     = render 'application/favicon'
     = canonical_tag
@@ -17,3 +18,4 @@
       = render 'components/pop_out'
       = yield
       = render 'layouts/footer'
+  / Global site tag (gtag.js) - Google Analytics
